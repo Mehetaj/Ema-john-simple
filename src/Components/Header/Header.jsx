@@ -7,10 +7,10 @@ const Header = () => {
             <img src={logo} alt="" />
             </div>
             <div className=''>
-            <a className='ml-[30px] hover:text-orange-500' href="/shop">Shop</a>
-            <a className='ml-[30px] hover:text-orange-500' href="/order">Order</a>
-            <a className='ml-[30px] hover:text-orange-500' href="/inventory">Inventory</a>
-            <a className='ml-[30px] hover:text-orange-500' href="/login">Login</a>
+            <a className='ml-[30px] hover:text-orange-400' href="/shop">Shop</a>
+            <a className='ml-[30px] hover:text-orange-400' href="/order">Order</a>
+            <a className='ml-[30px] hover:text-orange-400' href="/inventory">Inventory</a>
+            <a className='ml-[30px] hover:text-orange-400' href="/login">Login</a>
             </div>
         </div>
     );
