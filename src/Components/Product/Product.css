@@ -1,0 +1,13 @@
+.product-name{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015rem;
+    color: #0E161A;
+}
+
+.product-info p{
+    margin-top: 5px;
+}
