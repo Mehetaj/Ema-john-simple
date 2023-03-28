@@ -2,8 +2,6 @@ import React from 'react';
 
 const Cart = ({cart}) => {
     // const cart = props.cart;
-    console.log(cart);
-
     let total = 0;
     let totalShipping = 0;
     for (const product of cart){
@@ -11,7 +9,6 @@ const Cart = ({cart}) => {
         totalShipping  =  totalShipping + product.shipping
     }
     const tax = total*7/100;
-
     const grandTotal = total + totalShipping + tax;
     
     return (
