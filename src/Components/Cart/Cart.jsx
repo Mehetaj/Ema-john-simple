@@ -4,9 +4,16 @@ const Cart = ({cart}) => {
     // const cart = props.cart;
     let total = 0;
     let totalShipping = 0;
+    let quantity = 0;
     for (const product of cart){
-        total = total + product.price;
-        totalShipping  =  totalShipping + product.shipping
+        // if (product.quantity === 0) {
+        //     product.quantity = 1;
+        // }
+        // product.quantity = product.quantity || 1;
+
+        total = total + product.price * product.quantity;
+        totalShipping  =  totalShipping + product.shipping;
+        quantity = quantity + product.quantity;
     }
     const tax = total*7/100;
     const grandTotal = total + totalShipping + tax;
@@ -14,7 +21,7 @@ const Cart = ({cart}) => {
     return (
         <div className=' p-10 sticky top-0  bg-orange-200 m-12'>
             <h2 className='text-xl text-center'>Order Summary</h2>
-            <p className='text-xl mt-6'>Selected Items: {cart.length}</p>
+            <p className='text-xl mt-6'>Selected Items: {quantity}</p>
             <p className='text-xl mt-6'>Total Price: ${total}</p>
             <p className='text-xl mt-6'>Total Shipping: ${totalShipping}</p>
             <p className='text-xl mt-6'>Tax: {tax.toFixed(2)}</p>
